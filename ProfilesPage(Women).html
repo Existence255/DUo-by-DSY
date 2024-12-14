@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dating Profiles</title>
+  <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 105, 180, 0.8);
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+        background-color: rgba(255, 105, 180, 1);
+        border-radius: 4px;
+    }
+
+    header {
+        text-align: center;
+        background-color: rgba(255, 105, 180, 0.8);
+        color: #fff;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    .profile-container {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .profile-card {
+        flex: 0 0 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .profile-card img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .profile-card button {
+        background-color: rgba(255, 105, 180, 0.8);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 15px 0;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .profile-card button:hover {
+        background-color: rgba(255, 105, 180, 1);
+    }
+
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+    }
+
+    .modal-content {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        width: 90%;
+        max-width: 500px;
+        text-align: center;
+        position: relative;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #ccc;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .close:hover {
+        background-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+      <div class="logo"><a href="DSY home.html">💖DUo</a></div>
+      <div class="nav-links">
+          <a href="DSY home.html">Home</a>
+          <a href="ProfilesPage(Men).html">Men</a>
+          <a href="AboutPage.html">About</a>
+      </div>
+  </nav>
+
+  <header>
+      <h1>Welcome to DUo</h1>
+      <p>Swipe through and discover your perfect match!</p>
+  </header>
+
+  <div class="profile-container">
+      <div class="profile-card">
+          <img src="SaanviArora42.jpg" alt="Profile Picture">
+          <h2>Saanvi, 18</h2>
+          <p>💸 South Delhi | 🍕Foodie | 💻💻</p>
+          <button onclick="openModal('Saanvi, 18', '💸 South Delhi | 🍕Foodie | 💻💻')">View Profile</button>
+      </div>
+      <div class="profile-card">
+          <img src="PoorviKhan.jpg" alt="Profile Picture">
+          <h2>Poorvi, 19</h2>
+          <p>🤘🏻emo | 🍺🍺 | "let her cook👩🏻‍🍳"</p>
+          <button onclick="openModal('Poorvi, 19', '🤘🏻emo | 🍺🍺 | let her cook👩🏻‍🍳')">View Profile</button>
+      </div>
+  </div>
+
+  <div class="modal" id="modal">
+      <div class="modal-content">
+          <button class="close" onclick="closeModal()">&times;</button>
+          <h2 id="modal-title"></h2>
+          <p id="modal-description"></p>
+      </div>
+  </div>
+
+  <script>
+      function openModal(name, description) {
+          document.getElementById('modal-title').textContent = name;
+          document.getElementById('modal-description').textContent = description;
+          document.getElementById('modal').style.display = 'flex';
+      }
+
+      function closeModal() {
+          document.getElementById('modal').style.display = 'none';
+      }
+  </script>
+</body>
+</html>
