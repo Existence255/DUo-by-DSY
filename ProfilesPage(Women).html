@@ -1,0 +1,211 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dating Profiles</title>
+  <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+    }
+
+    .background {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url() no-repeat center center/cover; 
+    z-index: -1; 
+    opacity: 0.8; 
+    }
+    
+    .navbar {
+        position: sticky;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(255, 105, 180, 0.8);
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar img {
+        height: 40px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .navbar a:hover {
+        background-color: rgba(255, 105, 180, 1);
+        border-radius: 4px;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: rgba(255, 105, 180, 0.8);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        z-index: 1;
+        min-width: 150px;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: rgba(255, 105, 180, 1);
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    header {
+        text-align: center;
+        background-color: rgba(255, 105, 180, 0.8) ;
+        color: #fff;
+        padding: 20px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    header p {
+        margin: 5px 0;
+        font-size: 1.2rem;
+    }
+
+    .profile-container {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center
+    }
+
+    .profile-card {
+        flex: 0 0 300px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        scroll-snap-align: start;
+    }
+
+    .profile-card img {
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .profile-card h2 {
+        margin: 15px 0;
+        
+        font-size: 1.5rem;
+    }
+
+    .profile-card p {
+        font-size: 1rem;
+        color: #666;
+      margin: 10px 15px;
+    }
+
+    .profile-card button {
+        background-color: rgba(255, 105, 180, 0.8);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin: 15px 0;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .profile-card button:hover {
+        background-color: rgba(255, 105, 180, 1);
+    }
+
+    footer {
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <nav class="navbar">
+    <div class="logo">
+        <a href="index.html">💖DUo</a>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <a>Profiles</a>
+            <div class="dropdown-content">
+                <a href="ProfilesPage(Men).html">Men</a>
+                <a href="ProfilesPage(Women).html">Women</a>
+                <a href="ProfilesPage(Others).html">Others</a>
+            </div>
+        </div>
+        <a href="AboutPage.html">About</a>
+    </div>
+  </nav>
+  <header>
+    <h1>Welcome to DUo</h1>
+    <p>Swipe through and discover your perfect match!</p>
+  </header>
+
+  <div class="profile-container">
+    <div class="profile-card">
+      <img src="SaanviArora42.jpg" alt="Profile Picture">
+      <h2>Saanvi, 18</h2>
+      <p>💸 South Delhi | 🍕Foodie | 💻💻</p>
+      <button>View Profile</button>
+    </div>
+    <div class="profile-card">
+      <img src="PoorviKhan.jpg" alt="Profile Picture">
+      <h2>Poorvi, 19</h2>
+      <p>🤘🏻emo | 🍺🍺 |<br> "let her cook👩🏻‍🍳"</p>
+      <button>View Profile</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 DUo. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
